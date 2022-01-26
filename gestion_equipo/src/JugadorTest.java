@@ -192,7 +192,7 @@ class JugadorTest {
         String idioma = "Inglés";
         jugador.setIdioma(idioma);;
 
-        assertEquals (idioma, jugador.getIdioma());
+        assertEquals(idioma, jugador.getIdioma());
     }
 
     //Test comprobar que el idioma seleccionado sea español
