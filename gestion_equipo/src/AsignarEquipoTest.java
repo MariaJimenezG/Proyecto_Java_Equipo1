@@ -74,6 +74,8 @@ class AsignarEquipoTest {
         jugador.setIdioma(idioma);
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     /* Asignar jugador que exista, pero su edad sea inválida (podeis poner cualquier edad no válida, porque ya se prueba todas las combinaciones posibles en el anterior */
@@ -92,6 +94,9 @@ class AsignarEquipoTest {
         jugador.setIdioma(idioma);
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
+        
     }
 
     /* Asignar jugador que exista, pero no tenga edad(es decir, habéis creado el jugador pero no habéis puesto el edad con setEdad) */
@@ -109,6 +114,8 @@ class AsignarEquipoTest {
         jugador.setIdioma(idioma);
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     /* Asignar jugador que exista, pero su idioma sea inválido (podeis poner cualquier idioma no válido, porque ya se prueba todas las combinaciones posibles en el anterior) */
@@ -127,6 +134,8 @@ class AsignarEquipoTest {
         jugador.setIdioma(idioma);
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     /* Asignar jugador que exista, pero no tenga idioma(es decir, habéis creado el jugador pero no habéis puesto el idioma con setIdioma) */
@@ -144,6 +153,8 @@ class AsignarEquipoTest {
         String idioma = null;
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     //TEST RELACIONADO CON EQUIPO
