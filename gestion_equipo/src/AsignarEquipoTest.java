@@ -8,15 +8,13 @@ class AsignarEquipoTest {
     /* ASIGNAR JUGADOR QUE NO EXISTA. No se asigna */
     @Test
     void testSetJugadorNoExistente(){
-        AsignarEquipo asignarEquipo = new AsignarEquipo();
+        AsignarEquipo asignarEquipo = new AsignarEquipo(); 
         Jugador jugador = new Jugador();
-        String nombre = null;
-        jugador.setNombreJugador(nombre);
-        Integer edad = null;
-        jugador.setEdad(edad);
-        String idioma = null;
-        jugador.setIdioma(idioma);
-        asignarEquipo.setJugador(null);
+        jugador = null;
+        
+        asignarEquipo.setJugador(jugador);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     /* ASIGNAR JUGADOR EXISTENTE CON TODOS LOS CAMPOS VÁLIDOS. Se asigna*/
@@ -57,6 +55,8 @@ class AsignarEquipoTest {
         jugador.setIdioma(idioma);
         
         asignarEquipo.setJugador(null);
+        
+        assertNull(asignarEquipo.getJugador());
     }
 
     /* Asignar jugador que exista, pero no tenga nombre (es decir, habéis creado el jugador pero no habéis puesto el nombre con setnombre) */
