@@ -54,7 +54,7 @@ class AsignarEquipoTest {
         String idioma = "Español";
         jugador.setIdioma(idioma);
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
     }
@@ -73,7 +73,7 @@ class AsignarEquipoTest {
         String idioma = "Inglés";
         jugador.setIdioma(idioma);
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
     }
@@ -93,7 +93,7 @@ class AsignarEquipoTest {
         String idioma = "Inglés";
         jugador.setIdioma(idioma);
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
         
@@ -113,7 +113,7 @@ class AsignarEquipoTest {
         String idioma = "Inglés";
         jugador.setIdioma(idioma);
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
     }
@@ -133,7 +133,7 @@ class AsignarEquipoTest {
         String idioma = "Japonés";
         jugador.setIdioma(idioma);
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
     }
@@ -152,7 +152,7 @@ class AsignarEquipoTest {
         
         String idioma = null;
         
-        asignarEquipo.setJugador(null);
+        asignarEquipo.setJugador(jugador);
         
         assertNull(asignarEquipo.getJugador());
     }
