@@ -71,7 +71,7 @@ class JugadorTest {
     @Test
     void testSetNombreIgual20Caracteres() {
         Jugador jugador = new Jugador();
-        String nombreJugador = "Juan José María Yoel";
+        String nombreJugador = "Juan Jose Maria Yoel";
         jugador.setNombreJugador(nombreJugador);
 
         assertEquals(nombreJugador, jugador.getNombreJugador());
@@ -91,17 +91,17 @@ class JugadorTest {
     @Test
     void testEdadVacio() {
         Jugador jugador = new Jugador();
-        Integer edad = null;
+        int edad = 0;
         jugador.setEdad(edad);
 
-        assertNull(jugador.getEdad());
+        assertEquals(0, jugador.getEdad());
     }
 
-    //Test comprobar si la edad es un número
+    //Test comprobar si la edad es un número válido
     @Test
     void testEdadNumeroValido() {
         Jugador jugador = new Jugador();
-        int edad= 5;
+        int edad = 20;
         jugador.setEdad(edad);
 
         assertEquals(edad, jugador.getEdad());
@@ -112,10 +112,10 @@ class JugadorTest {
     @Test
     void testEdadNumeroInvalido() {
         Jugador jugador = new Jugador();
-        int edad= Integer.parseInt("p");
+        Integer edad = Integer.parseInt("p");
         jugador.setEdad(edad);
 
-        assertNull(jugador.getEdad());
+        assertEquals(0, jugador.getEdad());
     }
 
 
@@ -127,7 +127,7 @@ class JugadorTest {
         int edad = 12;
         jugador.setEdad(edad);
 
-        assertNull(jugador.getEdad());
+        assertEquals(0, jugador.getEdad());
     }
 
 
@@ -171,14 +171,14 @@ class JugadorTest {
         int edad = 111;
         jugador.setEdad(edad);
 
-        assertNull(jugador.getEdad());
+        assertEquals(0, jugador.getEdad());
     }
 
     //Test comprobar que el idioma no se haya seleccionado
     @Test
     void testIdiomaNoSelec() {
         Jugador jugador = new Jugador();
-        String idioma = null;
+        String idioma = "";
         jugador.setIdioma(idioma);;
 
         assertNull(jugador.getIdioma());
@@ -189,7 +189,7 @@ class JugadorTest {
     @Test
     void testIdiomaIngles() {
         Jugador jugador = new Jugador();
-        String idioma = "Inglés";
+        String idioma = "inglés";
         jugador.setIdioma(idioma);;
 
         assertEquals(idioma, jugador.getIdioma());
@@ -199,7 +199,7 @@ class JugadorTest {
     @Test
     void testIdiomaEspanol() {
         Jugador jugador = new Jugador();
-        String idioma = "Español";
+        String idioma = "español";
         jugador.setIdioma(idioma);;
 
         assertEquals(idioma, jugador.getIdioma());
@@ -209,7 +209,7 @@ class JugadorTest {
     @Test
     void testIdiomaAleman() {
         Jugador jugador = new Jugador();
-        String idioma = "Alemán";
+        String idioma = "alemán";
         jugador.setIdioma(idioma);;
 
         assertEquals(idioma, jugador.getIdioma());
@@ -219,7 +219,7 @@ class JugadorTest {
     @Test
     void testIdiomaFrances() {
         Jugador jugador = new Jugador();
-        String idioma = "Francés";
+        String idioma = "francés";
         jugador.setIdioma(idioma);;
 
         assertEquals(idioma, jugador.getIdioma());
