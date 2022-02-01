@@ -45,7 +45,7 @@ class EquipoTest {
 		assertEquals(null, equipo.getNombreEquipo());
 	}
 	/**
-	 * Test para comprobar que no permite guardar nombre de mas de 4 caracteres o igual
+	 * Test para comprobar que permite guardar nombre de mas de 4 caracteres o igual
 	 */
 	@Test
 	void testSetNombreEquipoIgualCuatroCaracteres() {
@@ -127,7 +127,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int ranking=12;
 		equipo.setRanking(ranking);
-		assertEquals(ranking, equipo.getRanking());
+		assertNull(equipo.getRanking());
 	}
 	/**
 	 * Test de dejar el ranking mayor a 0       
@@ -159,14 +159,5 @@ class EquipoTest {
 		equipo.setRanking(ranking);
 		assertEquals(ranking, equipo.getRanking());
 	}
-	/**
-	 * Test de dejar el ranking mayor a 10
-	 */
-	@Test
-	void testSetRankingMayorQueDiez() {
-		Equipo equipo = new Equipo();
-		Integer ranking=11;
-		equipo.setRanking(ranking);
-		assertNull(equipo.getRanking());
-	}
+	
 }
