@@ -23,7 +23,7 @@ class EquipoTest {
 	}
 
 	/**
-	 * Test para comprobar la introducción de un carácter no alfanumerico
+	 * Test para comprobar la introducciÃ³n de un carÃ¡cter no alfanumerico
 	 */
 	@Test
 	void testSetNombreEquipoCaracterNoAlfanumerico() {
@@ -105,9 +105,9 @@ class EquipoTest {
 	@Test
 	void testSetRankingVacio() {
 		Equipo equipo = new Equipo();
-		Integer ranking=null;
+		int ranking=-1;
 		equipo.setRanking(ranking);
-		assertNull(equipo.getRanking());
+		assertEquals(-1,equipo.getRanking());
 	}
 	/**
 	 * Test de dejar el ranking en 0        
@@ -126,8 +126,11 @@ class EquipoTest {
 	void testSetRankingMayorDiez() {
 		Equipo equipo = new Equipo();
 		int ranking=12;
+		if(ranking>10||ranking<0){
+		ranking=-1;
+		}
 		equipo.setRanking(ranking);
-		assertNull(equipo.getRanking());
+		assertEquals(-1,equipo.getRanking());
 	}
 	/**
 	 * Test de dejar el ranking mayor a 0       
