@@ -31,6 +31,9 @@ public class Equipo {
 		if(ranking>=0&&ranking<=10) {
 			this.ranking=ranking;
 		}
+		else{
+		this.ranking=-1;
+		}
 	}
 	
 	public String getNombreEquipo() {
